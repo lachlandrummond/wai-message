@@ -1,0 +1,12 @@
+.portal{
+	width: 400px;
+	background-color: #EEE;
+	margin-left: calc(50% - 200px);
+	margin-top: 10vh;
+	border-radius: 4px;
+	font-family: Roboto;
+}
+.portal-error{
+	padding: 0px 20px;
+	font-size: 20px;
+}
