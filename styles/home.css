@@ -20,7 +20,7 @@
 .home-nav{
 	margin-right: 5%;
 }
-.home-nav-link:first-child{
+.home-nav-signup{
 	margin-right: 10px;
 	font-size: 20px;
 	color: #EEE;
@@ -30,11 +30,11 @@
 	border: 2px solid #00B035;
 	transition: background-color 0.2s, border 0.2s;
 }
-.home-nav-link:first-child:hover{
+.home-nav-signup:hover{
 	background-color: #008E2B;
 	border: 2px solid #008E2B;
 }
-.home-nav-link:last-child{
+.home-nav-login{
 	font-size: 20px;
 	color: #EEE;
 	padding: 6px 16px;
@@ -44,10 +44,51 @@
 	background-color: rgba(0,0,0,0);
 	transition: color 0.2s, background-color 0.2s;
 }
-.home-nav-link:last-child:hover{
+.home-nav-login:hover{
 	color: #666;
 	background-color: #EEE;
 }
+
+
+
+
+
+
+.home-nav-user{
+	font-size: 18px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.home-nav-user-name{
+	margin-right: 10px;
+	color: #EEE;
+}
+.home-nav-user-logout{
+	color: #EEE;
+	border-radius: 20px;
+	border: 2px solid #EEE;
+	padding: 4px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: background-color 0.2s, color 0.2s;
+}
+.home-nav-user-logout:hover{
+	background-color: #EEE;
+	color: #666;
+}
+.home-nav-user-logout-text{
+	padding-top: 1px;
+	padding-left: 4px;
+}
+
+
+
+
+
+
+
 .home-main{
 	height: 100vh;
 	width: 100%;
@@ -83,8 +124,8 @@
 	padding: 8px 18px;
 	color: #EEE;
 	background-color: #00B035;
-	text-align: center;
-	margin-left: calc(50% - 70px);
+	transform: translate(-50%, 0%);
+	margin-left: 50%;
 	transition: background-color 0.2s, border 0.2s;
 }
 .home-main-cta:hover{

@@ -8,4 +8,24 @@
             <a href="?page=logout" class="board-header-user-logout"><i class="material-icons board-header-user-logout-icon">input</i><span class="board-header-user-logout-text">Logout</span></a>
         </div>
     </div>
+    <section class="board-recent">
+        <h2 class="board-recent-head">Recent Chats</h2>
+        <div class="board-recent-item-container">
+            <a href="#" class="board-recent-item-link"><article class="board-recent-item"><img src="./imgs/new.svg" class="board-recent-avatar"><p class="board-recent-item-text">New</p></article></a>
+            <?php
+                require_once('db-connect.php');
+                $username = $_SESSION['username'];
+                $query = "SELECT * FROM messages WHERE sender = '$username' OR receiver = '$username' ORDER BY timestamp DESC";
+                $result = mysqli_query($link, $query);
+                while($recent = mysqli_fetch_assoc($result)){
+                    if($recent['sender'] == $username){
+                        print '<a href="'.$recent['receiver'].'" class="board-recent-item-link"><article class="board-recent-item"><img src="./imgs/avatar.svg" class="board-recent-avatar"><p class="board-recent-item-text">'.$recent['receiver'].'</p></article></a>';
+                    } else {
+                        print '<a href="'.$recent['sender'].'" class="board-recent-item-link"><article class="board-recent-item"><img src="./imgs/avatar.svg" class="board-recent-avatar"><p class="board-recent-item-text">'.$recent['sender'].'</p></article></a>';
+                    }
+                }
+                mysqli_close($link);
+            ?>
+        </div>
+    </section>
 </div>

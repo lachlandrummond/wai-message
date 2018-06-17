@@ -1,4 +1,4 @@
-.portal{
+.signing{
 	width: 400px;
 	padding: 10px;
 	background-color: #EEE;
@@ -7,7 +7,7 @@
 	border-radius: 4px;
 	font-family: Roboto;
 }
-.portal-error{
+.signing-error{
 	padding: 10px;
 	font-size: 20px;
 	border-radius: 4px;
