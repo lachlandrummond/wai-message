@@ -1,0 +1,79 @@
+.add{
+	width: 400px;
+	background-color: #EEE;
+	margin-left: calc(50% - 200px);
+	margin-top: 10vh;
+	border-radius: 4px;
+	font-family: Roboto;
+}
+.add-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+	font-family: Arimo;
+}
+.add-header-back{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px 10px;
+	border-radius: 20px;
+	border: 2px solid #666;
+	margin-left: 20px;
+	color: #666;
+	transition: background-color 0.2s, color 0.2s;
+}
+.add-header-back:hover{
+	background-color: #666;
+	color: #EEE;
+}
+.add-header-back-text{
+	padding-top: 1px;
+	font-size: 18px;
+}
+.add-header-accent{
+	width: 5px;
+	height: 30px;
+	margin-left: 110px;
+	background-color: #00B035;
+}
+.add-form{
+	margin-top: 50px;
+}
+.add-input{
+	padding-left: 5px;
+	border: 1px solid #666;
+	font-size: 18px;
+	width: 200px;
+	height: 30px;
+}
+.add-input-container{
+	font-size: 18px;
+	color: #666;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 340px;
+	margin-left: 20px;
+	height: 30px;
+}
+.add-submit{
+	text-align: center;
+}
+.add-submit-btn{
+	margin-top: 30px;
+	font-size: 20px;
+	color: #EEE;
+	cursor: pointer;
+	padding: 5px 16px;
+	background-color: #00B035;
+	border: 2px solid #00B035;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	transition: background-color 0.2s, border 0.2s;
+}
+.add-submit-btn:hover{
+	background-color: #008E2B;
+	border: 2px solid #008E2B;
+}

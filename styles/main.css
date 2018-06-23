@@ -6,6 +6,9 @@
 @import url("portal.css");
 @import url("signing.css");
 @import url("board.css");
+@import url("logout.css");
+@import url("msg.css");
+@import url("add.css");
 
 *{
 	margin: 0;
@@ -18,4 +21,20 @@
 	width: 100%;
 	height: 100vh;
 	background-image: url(../imgs/repeat.png);
+}
+.copyright{
+	z-index: -1;
+	position: absolute;
+	bottom: 5px;
+	font-family: roboto;
+	font-size: 12px;
+	transform: translate(-50%, -50%);
+	left: 50%;
+}
+.c-light{
+	color: #EEE;
+}
+.c-dark{
+	color: #666;
+	z-index: 0;
 }

@@ -28,3 +28,4 @@
 		mysqli_close($link);
 	?>
 </div>
+<p class="copyright c-light">&copy; Lachlan Drummond 2018</p>

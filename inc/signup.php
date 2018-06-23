@@ -17,7 +17,7 @@
 		<i><p class="signup-input-sub">4 - 30 characters, a-z, 0-9, dots and dashes, no caps or spaces</p></i>
 		<div class="signup-password signup-input-container">
 			<label for="password">Password:</label>
-			<input class="signup-input" type="password" name="password" pattern="{8,}" required>
+			<input class="signup-input" type="password" name="password" pattern="{8,}" maxlength="50" required>
 		</div>
 		<i><p class="signup-input-sub">8 - 50 characters, no spaces</p></i>
 		<div class="signup-submit">
@@ -26,3 +26,4 @@
 		</div>
 	</form>
 </div>
+<p class="copyright c-light">&copy; Lachlan Drummond 2018</p>

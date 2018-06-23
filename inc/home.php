@@ -32,3 +32,4 @@
 		</a>
 	</main>
 </div>
+<p class="copyright-s c-light">&copy; Lachlan Drummond 2018</p>
