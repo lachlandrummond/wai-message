@@ -23,14 +23,10 @@
             <?php
                 require_once('db-connect.php');
                 $username = $_SESSION['username'];
-                $query = "SELECT * FROM messages WHERE sender = '$username' OR receiver = '$username' ORDER BY timestamp DESC";
+                $query = "SELECT receiver FROM messages WHERE sender = '$username' UNION (SELECT sender FROM messages WHERE receiver = '$username')";
                 $result = mysqli_query($link, $query);
                 while($recent = mysqli_fetch_assoc($result)){
-                    if($recent['sender'] == $username){
-                        print '<a href="?page=msg&msg='.$recent['receiver'].'" class="board-recent-item-link"><article class="board-recent-item"><img src="./imgs/avatar.svg" class="board-recent-avatar"><p class="board-recent-item-text">'.$recent['receiver'].'</p></article></a>';
-                    } else {
-                        print '<a href="?page=msg&msg='.$recent['sender'].'" class="board-recent-item-link"><article class="board-recent-item"><img src="./imgs/avatar.svg" class="board-recent-avatar"><p class="board-recent-item-text">'.$recent['sender'].'</p></article></a>';
-                    }
+                    print '<a href="?page=msg&msg='.$recent['receiver'].'" class="board-recent-item-link"><article class="board-recent-item"><img src="./imgs/avatar.svg" class="board-recent-avatar"><p class="board-recent-item-text">'.$recent['receiver'].'</p></article></a>';
                 }
                 mysqli_close($link);
             ?>

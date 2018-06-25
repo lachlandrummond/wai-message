@@ -1,0 +1,11 @@
+SELECT sender, receiver, timestamp, username 
+FROM messages
+INNER JOIN users
+ON sender = username
+WHERE username = 'lachlan.nz'
+UNION (SELECT sender, receiver, timestamp, username
+       FROM messages
+       INNER JOIN users
+       ON receiver = username
+       WHERE username = 'lachlan.nz')
+ORDER BY timestamp DESC
