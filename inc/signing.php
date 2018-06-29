@@ -1,3 +1,8 @@
+<?php
+	if($logged_in){
+		header('Location: ?page=board');
+	}
+?>
 <div class="signing">
 	<?php
 		require_once('db-connect.php');

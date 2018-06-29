@@ -1,4 +1,7 @@
 <?php
+    if(!$logged_in){
+        header('Location: ?page=home');
+    }
     $_SESSION['msg'] = $_GET['msg'];
 ?>
 <div class="msg">
@@ -14,7 +17,6 @@
     <main class="msg-msgs">
         <div id="msg-msgs-feed">
             <?php
-                error_reporting(0);
                 require_once('db-connect.php');
                 $user = $_SESSION['username'];
                 $msg = $_SESSION['msg'];
@@ -24,7 +26,7 @@
                 while($msg = mysqli_fetch_assoc($result)){
                     if($msg['sender'] == $user){
                         date_default_timezone_set("Pacific/Auckland");
-                        $timesent = date("h:i A", strtotime( $msg['timestamp']));
+                        $timesent = date("h:i A D", strtotime( $msg['timestamp']));
                         print '<div class="msg-msgs-feed-msg--sent">
                                     <div class="msg-msgs-feed-msg">
                                         <div class="msg-msgs-feed-msg-bubble sent">
@@ -35,7 +37,7 @@
                                 </div>';
                     } else {
                         date_default_timezone_set("Pacific/Auckland");
-                        $timesent = date("h:i A", strtotime( $msg['timestamp']));
+                        $timesent = date("h:i A D", strtotime( $msg['timestamp']));
                         print '<div class="msg-msgs-feed-msg--received">
                                     <div class="msg-msgs-feed-msg">
                                         <div class="msg-msgs-feed-msg-bubble received">
@@ -50,8 +52,8 @@
             ?>
         </div>
         <form class="msg-msgs-input" action="?page=send" method="post">
-            <input type="text" name="msg_send" maxlength="500" autocomplete="off" required autofocus>
-            <input class="msg-send-btn" type="submit" value="Send"></input>
+            <input class="msg-msgs-send-input" type="text" name="msg_send" maxlength="500" autocomplete="off" required autofocus>
+            <input class="msg-msgs-send-btn material-icons" type="submit" value="send"></input>
         </form>
     </main>
     <script src="./scripts/msg.js"></script>

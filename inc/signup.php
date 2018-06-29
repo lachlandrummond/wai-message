@@ -1,3 +1,8 @@
+<?php
+	if($logged_in){
+		header('Location: ?page=board');
+	}
+?>
 <div class="signup">
 	<div class="signup-header">
 		<a href="?page=home" class="signup-header-back"><i class="material-icons signup-header-back-icon">arrow_back_ios</i><span class="signup-header-back-text">Back</span></a>
@@ -7,17 +12,17 @@
 	<form class="signup-form" action="?page=signing" method="post">
 		<div class="signup-name signup-input-container">
 			<label for="name">Name:</label>
-			<input class="signup-input" type="text" name="name" pattern="[A-Za-z ]{4,}" maxlength="30" required autofocus>
+			<input class="signup-input" type="text" name="name" pattern="[A-Za-z ].{4,}" maxlength="30" autocomplete="off" required autofocus>
 		</div>
 		<i><p class="signup-input-sub">4 - 30 characters, a-z, caps and spaces allowed</p></i>
 		<div class="signup-username signup-input-container">
 			<label for="username">Username:</label>
-			<input class="signup-input" type="text" name="username" pattern="[a-z0-9.-]{4,}" maxlength="30" required>
+			<input class="signup-input" type="text" name="username" pattern="[a-z0-9.-].{4,}" maxlength="30" autocomplete="off" required>
 		</div>
 		<i><p class="signup-input-sub">4 - 30 characters, a-z, 0-9, dots and dashes, no caps or spaces</p></i>
 		<div class="signup-password signup-input-container">
 			<label for="password">Password:</label>
-			<input class="signup-input" type="password" name="password" pattern="{8,}" maxlength="50" required>
+			<input class="signup-input" type="password" name="password" pattern=".{8,}" maxlength="50" autocomplete="new-password" required>
 		</div>
 		<i><p class="signup-input-sub">8 - 50 characters, no spaces</p></i>
 		<div class="signup-submit">

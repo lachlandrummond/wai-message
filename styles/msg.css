@@ -44,6 +44,7 @@
     overflow-y: scroll;
     margin: 0px 20px;
     border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
 }
 #msg-msgs-feed:first-child{
     padding-top: 20px;
@@ -71,9 +72,33 @@
 }
 .msg-msgs-feed-msg--sent{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 .msg-msgs-feed-msg--received{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+}
+.msg-msgs-input{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.msg-msgs-send-input{
+    padding-left: 5px;
+	border: 1px solid #666;
+	font-size: 18px;
+	width: 295px;
+	height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.msg-msgs-send-btn{
+    transform: scale(1.5);
+    margin-right: 40px;
+    color: #00B035;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
