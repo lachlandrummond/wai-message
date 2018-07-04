@@ -1,4 +1,13 @@
+<!-- ---------------------------------------
+    File: sending.php processes the data for each message and inserts it into the database
+    Project: Wai-Message
+	Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- -->  
+
 <?php
+    //this PHP inserts the data from the message into the database
     error_reporting(0);
     require_once('db-connect.php');
     $id = NULL;

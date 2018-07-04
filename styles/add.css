@@ -1,3 +1,11 @@
+/* -----------------------------------------
+    File: add.css styles the output of add.php
+    Project: Wai-Message
+    Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- */  
+
 .add{
 	width: 400px;
 	background-color: #EEE;

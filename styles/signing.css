@@ -1,3 +1,11 @@
+/* -----------------------------------------
+    File: signing.css styles the output of signing.php
+    Project: Wai-Message
+    Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- */  
+
 .signing{
 	width: 400px;
 	padding: 10px;

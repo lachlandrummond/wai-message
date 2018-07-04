@@ -1,3 +1,11 @@
+<!-- ---------------------------------------
+    File: logout.php unsets all the session data so that the user is logged out
+    Project: Wai-Message
+	Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- -->
+
 <div class="logout">
     <?php
         error_reporting(0);

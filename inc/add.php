@@ -1,3 +1,14 @@
+<!-- ---------------------------------------
+    File: add.php is a form that sends the requested username to adding.php
+    Project: Wai-Message
+	Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- -->  
+
+
+<!-- this is the form where the user can enter the
+	recipients unique username for processing by adding.php -->
 <div class="add">
 	<div class="add-header">
 		<a href="?page=board" class="add-header-back"><i class="material-icons add-header-back-icon">arrow_back_ios</i><span class="add-header-back-text">Back</span></a>

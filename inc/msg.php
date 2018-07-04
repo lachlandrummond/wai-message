@@ -1,7 +1,20 @@
+<!-- ---------------------------------------
+    File: msg.php shows all the messages that the user has sent or
+            received from the recipient
+    Project: Wai-Message
+	Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- -->
+
 <?php
+    //checks to see if the user is logged in,
+	//they shouldn't be able to access the message
+	//page if they are not logged in
     if(!$logged_in){
         header('Location: ?page=home');
     }
+    //retrieves the recipient
     $_SESSION['msg'] = $_GET['msg'];
 ?>
 <div class="msg">
@@ -17,6 +30,9 @@
     <main class="msg-msgs">
         <div id="msg-msgs-feed">
             <?php
+                //retrieves all the messages between user and recipient and
+                //sorts them depending on who sent them
+                //aslo formats the date
                 require_once('db-connect.php');
                 $user = $_SESSION['username'];
                 $msg = $_SESSION['msg'];
@@ -51,9 +67,10 @@
                 mysqli_close($link);
             ?>
         </div>
+        <!-- this is the message box form to submit messages to send.php for insertion -->
         <form class="msg-msgs-input" action="?page=send" method="post">
             <input class="msg-msgs-send-input" type="text" name="msg_send" maxlength="500" autocomplete="off" required autofocus>
-            <input class="msg-msgs-send-btn material-icons" type="submit" value="send"></input>
+            <input class="msg-msgs-send-btn material-icons" type="submit" value="send">
         </form>
     </main>
     <script src="./scripts/msg.js"></script>

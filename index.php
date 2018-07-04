@@ -1,4 +1,14 @@
+<!-- ---------------------------------------
+    File: index.php acts as a included top and bottom,
+			allowing me to control the content included in it
+    Project: Wai-Message
+	Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- -->  
+
 <?php
+	//includes the page and initialises the php session
  	include('inc/page.php');
 	session_name('waisession');
 	session_start();
@@ -23,6 +33,7 @@
 	<body>
 		<div class="page-container">
 			<?php
+				//includes the page defined by page.php
 				include($include);
 			?>
 		</div>

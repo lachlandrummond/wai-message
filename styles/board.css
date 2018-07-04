@@ -1,3 +1,11 @@
+/* -----------------------------------------
+    File: board.css styles the output of board.php
+    Project: Wai-Message
+    Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- */  
+
 .board{
 	background-color: #EEE;
 	width: 100%;

@@ -1,4 +1,15 @@
+<!-- ---------------------------------------
+    File: signup.php is the form that gets submitted to signing.php
+    Project: Wai-Message
+	Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- -->  
+
 <?php
+	//checks to see if the user is logged in,
+	//they shouldn't be able to access the signup
+	//page if they are already logged in
 	if($logged_in){
 		header('Location: ?page=board');
 	}

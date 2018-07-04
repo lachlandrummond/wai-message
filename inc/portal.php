@@ -1,5 +1,17 @@
+<!-- ---------------------------------------
+    File: portal.php processes all the information from login.php
+    Project: Wai-Message
+	Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- -->
+
 <div class="portal">
 	<?php
+		//this php checks the submitted username against the database,
+		//then compares the salted and hashed password with the hash in the database.
+		//if the hashes are the same, the passwords are the same and it can log in the user,
+		//else it will show that the password was incorrect then redirect to the login page
 		error_reporting(0);
 		require_once('db-connect.php');
 		$login_username = $_POST['login_username'];

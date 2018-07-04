@@ -1,10 +1,25 @@
+<!-- ---------------------------------------
+    File: signing.php processes all the information from signup.php
+    Project: Wai-Message
+	Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- -->
+
 <?php
+	//checks to see if the user is logged in,
+	//they shouldn't be able to access the signing
+	//page if they are already logged in
 	if($logged_in){
 		header('Location: ?page=board');
 	}
 ?>
 <div class="signing">
 	<?php
+		//this PHP checks to see whether the username has already been taken,
+		//if it is, it shows that it is taken and redirects to the signup form again
+		//if the username is unique it will salt and hash the password and insert the
+		//data into the database as a new user
 		require_once('db-connect.php');
 		$name = $_POST['name'];
 		$username = $_POST['username'];

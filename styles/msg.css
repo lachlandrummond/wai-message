@@ -1,3 +1,11 @@
+/* -----------------------------------------
+    File: msg.css styles the output of msg.php
+    Project: Wai-Message
+    Standard: AS2.43
+    School: Waimea College
+    Author: Lachlan Drummond
+-------------------------------------------- */  
+
 .msg{
     width: 400px;
 	background-color: #EEE;
